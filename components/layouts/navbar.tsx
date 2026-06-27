@@ -1,10 +1,10 @@
 "use client"
 import Link from "next/link";
-import { Moon , Sun } from "lucide-react";
-import { useEffect , useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-    const [darkMode , setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         const theme = localStorage.getItem("theme");
@@ -12,24 +12,24 @@ export default function Navbar() {
             setDarkMode(true);
             document.documentElement.classList.add("dark")
         } else {
-           setDarkMode(false);
-           document.documentElement.classList.remove("dark")
+            setDarkMode(false);
+            document.documentElement.classList.remove("dark")
         }
     }, [])
 
-  const toggleTheme = () => {
-    if(darkMode) {
-        document.documentElement.classList.remove("dark")
-        localStorage.setItem("theme", "light")
-        setDarkMode(false)
-    } else {
-        document.documentElement.classList.add("dark")
-        localStorage.setItem("theme", "dark")
-        setDarkMode(true)
+    const toggleTheme = () => {
+        if (darkMode) {
+            document.documentElement.classList.remove("dark")
+            localStorage.setItem("theme", "light")
+            setDarkMode(false)
+        } else {
+            document.documentElement.classList.add("dark")
+            localStorage.setItem("theme", "dark")
+            setDarkMode(true)
+        }
     }
-  }
 
-    
+
 
     return (
         <header className="sticky top-0 z-50 flex items-center justify-between py-4 px-6 md:px-12 bg-white/30 dark:bg-slate-950/30 backdrop-blur-md border-b border-white/20 dark:border-slate-800/10 shadow-sm transition-all duration-300">
@@ -50,10 +50,10 @@ export default function Navbar() {
 
             <div className="flex items-center gap-4">
                 {/* Dark mode toggle button */}
-                <button 
-                onClick={toggleTheme}
-                aria-label="Toggle dark mode" className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all hover:scale-110 duration-200 cursor-pointer">
-                    {darkMode ? <Sun size={20} className="text-white-400"/> : <Moon size={20}/>}
+                <button
+                    onClick={toggleTheme}
+                    aria-label="Toggle dark mode" className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all hover:scale-110 duration-200 cursor-pointer">
+                    {darkMode ? <Sun size={20} className="text-white-400" /> : <Moon size={20} />}
                 </button>
 
                 {/* Resume button */}

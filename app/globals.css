@@ -23,3 +23,7 @@
 @theme inline{
   --color-background: var(--background);
 }
+
+html {
+  scroll-behavior: smooth;
+}
