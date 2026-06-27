@@ -8,7 +8,7 @@ export default function RootLayout({
     }) {
   return (
     <html>
-      <body className="bg-grid min-h-screen relative overflow-x-hidden bg-[#FAFBFD] text-gray-900">
+      <body className="bg-grid min-h-screen relative overflow-x-hidden bg-[#FAFBFD] text-gray-900 dark:bg-slate-950 dark:text-gray-100 transition-colors duration-300">
         {/* Glow blobs to make Glassmorphism shine */}
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#5CE1E6]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
         <div className="absolute top-[30%] right-[-10%] w-[600px] h-[600px] bg-[#36D1B7]/15 rounded-full blur-[150px] pointer-events-none -z-10" />
