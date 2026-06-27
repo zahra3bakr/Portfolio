@@ -42,10 +42,10 @@ export default function Navbar() {
             </div>
 
             <nav className="hidden md:flex items-center gap-8 text-gray-600 dark:text-gray-300 font-medium">
-                <Link href="/" className="hover:text-gray-900 dark:hover:text-white transition-colors">Home</Link>
-                <Link href="/about" className="hover:text-gray-900 dark:hover:text-white transition-colors">About</Link>
-                <Link href="/projects" className="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</Link>
-                <Link href="/contact" className="hover:text-gray-900 dark:hover:text-white transition-colors">Contact</Link>
+                <Link href="#Hero" className="hover:text-gray-900 dark:hover:text-white transition-colors">Home</Link>
+                <Link href="#About" className="hover:text-gray-900 dark:hover:text-white transition-colors">About</Link>
+                <Link href="#Projects" className="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</Link>
+                <Link href="#Contact" className="hover:text-gray-900 dark:hover:text-white transition-colors">Contact</Link>
             </nav>
 
             <div className="flex items-center gap-4">
