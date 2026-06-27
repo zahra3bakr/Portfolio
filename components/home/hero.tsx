@@ -1,4 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
     return (
@@ -30,10 +31,17 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Right side placeholder */}
+            {/* Right side image */}
             <div className="flex-1 flex justify-center md:justify-end w-full">
-                <div className="w-[400px] h-[500px] bg-[#E2E6EC] rounded-[2rem] flex items-center justify-center">
-                    <span className="text-gray-400">Image</span>
+                <div className="relative w-[400px] h-[500px] bg-[#E2E6EC] rounded-[2rem] overflow-hidden flex items-center justify-center">
+                    {/* The image will be loaded from the public folder. Name your image file 'profile.jpg' and put it in the public folder. */}
+                    <Image
+                        src="/profile.jpg"
+                        alt="Zahra's Profile"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 400px"
+                    />
                 </div>
             </div>
         </section>
